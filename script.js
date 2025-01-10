@@ -11,9 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
         heartContainer.appendChild(heart);
     }
 
-    // Show popup after animation
+    // Show big heart and popup after animation
     setTimeout(() => {
-        popup.classList.remove('hidden');
+        const bigHeart = document.createElement('div');
+        bigHeart.className = 'big-heart';
+        heartContainer.appendChild(bigHeart);
+
+        setTimeout(() => {
+            popup.classList.remove('hidden');
+        }, 1000);
     }, 5000);
 });
 
