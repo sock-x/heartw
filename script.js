@@ -14,9 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show popup after animation
     setTimeout(() => {
         popup.classList.remove('hidden');
-    }, 3000);
+    }, 5000);
 });
 
-function respondToInvite() {
-    alert("Great! Let's hang out!");
+function respondToInvite(response) {
+    if (response === 'yes') {
+        alert("Great! Let's hang out!");
+    } else {
+        alert("Maybe next time!");
+    }
 }
